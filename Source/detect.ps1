@@ -297,10 +297,10 @@ function Download-And-Install-Framework($requestedVersion) {
     $output = "$PSScriptRoot\netFrameworkInstaller$suffix.exe"
     $start_time = Get-Date
        
-    Invoke-WebRequest -Uri $url -OutFile $output  
+    #danger? Invoke-WebRequest -Uri $url -OutFile $output  
     Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"  
       
-    Start-Process $output 
+    #danger? Start-Process $output 
     # -NoNewWindow -Wait
 }
  
